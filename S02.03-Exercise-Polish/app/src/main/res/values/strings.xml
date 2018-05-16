@@ -28,7 +28,7 @@
     <string name="action_refresh">Refresh</string>
 
     <!--TODO (1) Add a string resource for your error message-->
-
+    <string name="load_failed_msg">Weather data load failed!</string>
 
     <!-- - - - - - - - - - - - - -->
     <!--Used by SunshineDateUtils-->
