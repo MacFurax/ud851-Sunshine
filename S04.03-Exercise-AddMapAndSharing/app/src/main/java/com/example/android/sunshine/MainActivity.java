@@ -222,6 +222,24 @@ public class MainActivity extends AppCompatActivity implements ForecastAdapterOn
         }
 
         // TODO (2) Launch the map when the map menu item is clicked
+        if( id == R.id.action_openmap){
+
+            Uri.Builder uriBuilder = new Uri.Builder();
+            uriBuilder.scheme("geo")
+                    .path("0,0")
+                    .query("Wavre,BE");
+            Uri mapUri = uriBuilder.build();
+
+            Intent intent = new Intent( Intent.ACTION_VIEW);
+            intent.setData(mapUri);
+            if( intent.resolveActivity(getPackageManager()) != null)
+            {
+                startActivity(intent);
+            }
+
+        }
+
+
 
         return super.onOptionsItemSelected(item);
     }
